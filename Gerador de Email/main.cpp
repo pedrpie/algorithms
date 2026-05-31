@@ -9,9 +9,7 @@ int main(){
     string emailComponent = "@ufrn.edu.br";
 
     getline(cin, nomeCompleto);
-    transform(nomeCompleto.begin(), nomeCompleto.end(), nomeCompleto.begin(), [](unsigned char c){
-        return tolower(c);
-    });
+    transform(nomeCompleto.begin(), nomeCompleto.end(), nomeCompleto.begin(), ::tolower);
 
     size_t primeiroNomeIndex = nomeCompleto.find(" ");
     size_t ultimoNomeIndex = nomeCompleto.rfind(" ");
